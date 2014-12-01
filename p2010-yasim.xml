@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Tecnam P2010  : Emmanuel BARANGER 2014
+
+      Sources       : http://en.wikipedia.org/wiki/Tecnam_P2010
+
+      Wingspan      : 10.50 m   (   34 ft 5 in )
+      Length        :  7.54 m   (   24 ft 9 in )
+      Height        :  2.64 m   (    8 ft 8 in )
+      Empty weight  :  710 kg   ( 1565 lb      )
+      Cruise speed  : 237 km/h  (  128 kt at 65% power at 2286 m ( 7500 ft ) )
+      Maximum speed : 259 km/h  (  140 kt      )
+      Engines       : 1 Lycoming IO-360-MIA air cooled flat four piston engine ( 180 hp )
+
+-->
+<airplane mass="1565" version="YASIM_VERSION_CURRENT">
+
+  <!-- Approach configuration -->
+  <approach speed="30" aoa="4" fuel="0.2">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+    <control-setting axis="/sim/weight[0]/weight-lb" value ="180"/>
+    <control-setting axis="/sim/weight[1]/weight-lb" value ="0"/>
+    <control-setting axis="/sim/weight[2]/weight-lb" value ="0"/>
+  </approach>
+
+  <!-- Cruise configuration -->
+  <cruise speed="128" alt="7500" fuel="0.5">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.6"/>
+    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/sim/weight[0]/weight-lb" value ="180"/>
+    <control-setting axis="/sim/weight[1]/weight-lb" value ="0"/>
+    <control-setting axis="/sim/weight[2]/weight-lb" value ="0"/>
+  </cruise>
+
+  <cockpit x="1.256" y="0.206" z="0.315"/>
+
+  <!--fuselage-->
+  <fuselage ax=" 3.289" ay="0" az="-0.093" bx=" 2.379" by="0" bz="-0.248" width="0.948" taper="0.3" midpoint="1"/>
+  <fuselage ax=" 2.475" ay="0" az="-0.248" bx=" 2.158" by="0" bz="-0.248" width="1.041" taper="0.9" midpoint="1"/>  
+  <fuselage ax=" 2.233" ay="0" az="-0.243" bx=" 1.584" by="0" bz="-0.073" width="1.188" taper="0.9" midpoint="1"/>
+  <fuselage ax=" 1.756" ay="0" az="-0.088" bx=" 0.046" by="0" bz="-0.088" width="1.188" taper="1.0" midpoint="1"/>  
+  <fuselage ax=" 0.104" ay="0" az="-0.084" bx="-1.204" by="0" bz="-0.225" width="1.158" taper="0.6" midpoint="0"/>
+  
+  <fuselage ax="-1.147" ay="0" az="-0.218" bx="-3.494" by="0" bz="-0.226" width="0.697" taper="0.5" midpoint="0"/>
+
+  <mstab x="0.797" y="0" z="0.494"
+        chord="1.390"
+        length="3.305"
+        taper="1" 
+        camber="0.01">
+        <stall aoa="24" width="6.0" peak="1.5"/>
+        <flap0 start="0.17" end="0.99" lift="1.2" drag="1.25"/>
+
+        <control-input control="FLAP0" axis="/controls/flight/flaps"/>
+
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+
+        <control-speed control="FLAP0" transition-time="2"/>
+  </mstab>
+
+  <wing x="0.797" y="3.305" z="0.494"
+        chord="1.390"
+        length="1.935"
+        taper="0.8"
+        sweep="-4"
+        dihedral="2"
+        camber="0.01">
+        <stall aoa="24" width="6.0" peak="1.5"/>
+        <flap0 start="0.01" end="0.9" lift="1.12" drag="1.1"/>
+
+        <control-input control="FLAP0" axis="/controls/flight/aileron" split="true"/>
+        <control-input control="FLAP0" axis="/controls/flight/aileron-trim" split="true"/>
+
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+  </wing>
+
+  <hstab x="-3.297" y="0" z="-0.174"
+         chord="0.717"
+         length="1.689"
+         taper="1" >
+         <stall aoa="25" width="2" peak="1.5"/>
+         <flap0 start="0" end="1.00" lift="1.5" drag="1.3"/>
+         <flap1 start="0" end="0.56" lift="1.5" drag="1.3"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP1"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+         <control-output control="FLAP1" prop="/surface-positions/elevator-trim-norm"/>
+  </hstab>
+
+  <vstab x="-2.748" y="0" z="-0.020"
+         chord="1.16"
+         length="1.46"
+         taper="0.5"
+         sweep="27">
+         <stall aoa="14" width="3" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.75" drag="1.35"/>
+
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+  <!-- Engines   source            : http://en.wikipedia.org/wiki/Lycoming_O-360#IO-360
+
+                 name              : Lycoming O-360
+                 type              : Four-cylinder, dual magneto, horizontally opposed, four-stroke aircraft engine
+                 power cruise      : 180 hp at 2700 rpm
+                 weight            : 117 kg      ( 258 lb  )
+                 displacement      : 361 in 3    ( 5916 cc )
+                 compression       : 8.5:1
+  gear-ratio="0.412"
+  -->
+  <propeller x="2.872" y="0" z="-0.144"
+             mass="258"
+             radius="0.922"
+             moment="10"
+             cruise-speed="128"
+             cruise-rpm="2263"
+             cruise-alt="7500"
+             cruise-power="165"
+             takeoff-power="180"
+             takeoff-rpm="2700">
+             <actionpt x="3.403" y="0" z="-0.086"/>
+             <piston-engine eng-rpm="2700"
+                            eng-power="180"
+                            displacement="361"
+                            compression="8.5">
+                            <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle" />
+                            <control-input control="STARTER" axis="/controls/engines/engine[0]/starter" />
+                            <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos" />
+                            <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture" />
+             </piston-engine>
+  </propeller>
+
+  <!-- Noze wheel -->
+  <gear x="2.818" y="0" z="-1.320" 
+        compression="0.07" 
+        spring="0.8"
+        on-solid="1"
+        sfric="1"
+        dfric="1">
+        <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="-0.1" dst1="0.1"/>
+  </gear>
+
+  <!-- Left wheel -->
+  <gear x="0.790" y="1.054" z="-1.281" 
+        compression="0.07"
+        spring="1.8"
+        damp="0.03"
+        on-solid="1" >
+        <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true" src0="0.0" src1="1.0" dst0="0.0" dst1="0.4"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <!-- Right wheel -->
+  <gear x="0.790" y="-1.054" z="-1.281" 
+        compression="0.07"
+        spring="1.8"
+        damp="0.03"
+        on-solid="1" >
+        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true" src0="0.0" src1="1.0" dst0="0.0" dst1="0.4"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <!-- 2 x 210 L = 2 x 462 lbs -->
+  <tank x="1.460" y="-0.7" z="0.490" capacity="462"/>
+  <tank x="1.460" y=" 0.7" z="0.490" capacity="462"/>
+
+  <!-- pilot -->
+  <weight x="1.10" y="0.3" z="-0.1" mass-prop="/sim/weight[0]/weight-lb"/>
+
+  <!-- copilot -->
+  <weight x="1.10" y="-0.3" z="-0.1" mass-prop="/sim/weight[1]/weight-lb"/>
+
+  <!-- baggage -->
+  <weight x="0.7" y="0" z="-0.1" mass-prop="/sim/weight[2]/weight-lb"/>
+
+  <!-- Mass distribution -->
+  <ballast x="2.6" y="0" z="-1.032" mass="150"/>
+
+</airplane>
