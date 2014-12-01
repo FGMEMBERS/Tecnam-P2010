@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>Tecnam P2010</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Autostart</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/electric/battery-switch</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/electric/engine/generator</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/lighting/instrument-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/lighting/nav-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/lighting/strobe</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/anti-ice/engine/carb-heat</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/engines/engine/fuel-pump</property>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/engines/engine/magnetos</property>
+          <value>3</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/instrumentation/zkv1000/pfd/status</property>
+          <value>1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/instrumentation/zkv1000/mfd/status</property>
+          <value>2</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>controls.startEngine(0,0)</script>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>gui.popupTip("Press 's' to start")</script>
+        </binding>
+      </item>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <!--
+      <item>
+        <label>Immatriculation</label>
+        <binding>
+          <command>nasal</command>
+          <script>p2010.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Toggle Rmi-Vor-Adf</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/p2010/rmi-view</property>          
+         </binding>
+       </item>
+      -->
+    </menu>
+  </default>
+
+</PropertyList>
