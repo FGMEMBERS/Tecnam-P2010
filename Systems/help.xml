@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Tecnam P2010</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>d</name>
+    <desc>Open and Close pilot door</desc>
+  </key>
+  <key>
+    <name>D</name>
+    <desc>Open and Close copilot door</desc>
+  </key>
+  <key>
+    <name>e</name>
+    <desc>Open and Close left passenger door</desc>
+  </key>
+  <key>
+    <name>E</name>
+    <desc>Open and Close right passenger door</desc>
+  </key>
+  
+</PropertyList>
