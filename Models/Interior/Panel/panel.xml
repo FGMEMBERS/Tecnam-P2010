@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+    <object-name>panel2</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>panel</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/panel-dim</factor-prop>
+      <red>   0.8 </red>
+      <green> 0.8 </green>
+      <blue>  0.8 </blue>
+    </emission>
+  </animation>
+  
+  <!-- ZKV 1000 PFD -->
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/zkv1000/pfd.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m> -0.266 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.060 </y-m>
+      <z-m>  0.114 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.060 </y-m>
+      <z-m>  0.022 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.060 </y-m>
+      <z-m> -0.072 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ZKV 1000 MFD -->
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/zkv1000/mfd.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.185 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- SWITCH -->
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/switch/battery.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m> -0.397 </y-m>
+      <z-m> -0.200 </z-m>
+      <pitch-deg> -25 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/switch/alternator.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m> -0.367 </y-m>
+      <z-m> -0.200 </z-m>
+      <pitch-deg> -25 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/switch/instr-lights.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m> -0.094 </y-m>
+      <z-m> -0.200 </z-m>
+      <pitch-deg> -25 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/switch/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m> -0.064 </y-m>
+      <z-m> -0.200 </z-m>
+      <pitch-deg> -25 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/switch/nav-lights.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m> -0.014 </y-m>
+      <z-m> -0.200 </z-m>
+      <pitch-deg> -25 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/switch/taxi-lights.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m>  0.016 </y-m>
+      <z-m> -0.200 </z-m>
+      <pitch-deg> -25 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/switch/other-lights.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m>  0.046 </y-m>
+      <z-m> -0.200 </z-m>
+      <pitch-deg> -25 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/switch/other-lights.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m>  0.076 </y-m>
+      <z-m> -0.200 </z-m>
+      <pitch-deg> -25 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/Interior/Panel/Instruments/switch/other-lights.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m>  0.106 </y-m>
+      <z-m> -0.200 </z-m>
+      <pitch-deg> -25 </pitch-deg>
+    </offsets>
+  </model>
+  
+</PropertyList>
