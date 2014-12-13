@@ -27,6 +27,8 @@ Some useful keys:
 Thanks
 ======
 
+D-ECHO for Splashscreen and livery
+
 ===============
 BARANGER Emmanuel
 November, 30, 2014. 
@@ -63,6 +65,8 @@ Quelques touches utiles :
 
 Remerciements
 =============
+
+D-ECHO pour le Splashscreen et la livrée
 
 ===============
 BARANGER Emmanuel

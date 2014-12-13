@@ -38,9 +38,13 @@
         <command>property-toggle</command>
         <property>/controls/lighting/landing-lights</property>
       </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
     </action>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>on-off</object-name>
@@ -52,5 +56,5 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>

@@ -189,6 +189,7 @@
     <object-name>asi.cursor.010</object-name>
     <object-name>asi.cursor.100</object-name>
     <object-name>asi.tape</object-name>
+    <object-name>hsi.fond</object-name>
     <object-name>hsi.arc</object-name>
     <object-name>hsi.bezel</object-name>
     <object-name>hsi.bug.GPS</object-name>
@@ -392,6 +393,7 @@
   <animation>
     <type>select</type>
     <object-name>hsi.bezel</object-name>
+    <object-name>hsi.fond</object-name>
     <object-name>hsi.bug.GPS</object-name>
     <object-name>hsi.bug.HDG</object-name>
     <object-name>hsi.compass</object-name>

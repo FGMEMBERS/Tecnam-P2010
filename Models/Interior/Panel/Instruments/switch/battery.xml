@@ -2,7 +2,7 @@
 
 <PropertyList>
   
-  <path>on-off.ac</path>
+  <path>on-offR.ac</path>
   
   <animation>
     <!-- Objets opaques -->
@@ -52,9 +52,11 @@
         <command>property-toggle</command>
         <property>controls/electric/battery-switch</property>
       </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
     </action>
   </animation>
-
+  
 </PropertyList>
-
-

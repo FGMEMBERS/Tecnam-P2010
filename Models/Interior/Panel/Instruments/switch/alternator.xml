@@ -25,6 +25,7 @@
       <green> 0.25 </green>
       <blue>  0.25 </blue>
     </emission>
+    
   </animation>
   
   <animation>
@@ -40,7 +41,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-    
+  
   <animation>
     <type>pick</type>
     <object-name>on-off</object-name>
@@ -52,9 +53,11 @@
         <command>property-toggle</command>
         <property>/controls/engines/engine/master-alt</property>
       </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
     </action>
   </animation>
-
+  
 </PropertyList>
-
-
