@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
- <path>on-off.ac</path>
-
+  
+  <path>on-off.ac</path>
+  
   <animation>
     <!-- Objets opaques -->
     <object-name>base</object-name>
     <object-name>on-off</object-name>
-
+    
     <!-- Objets transparents -->
   </animation>
-
+  
   <animation>
     <type>material</type>
     <object-name>on-off</object-name>
@@ -26,7 +26,7 @@
       <blue>  0.25 </blue>
     </emission>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <visible>true</visible>
@@ -38,9 +38,13 @@
         <command>property-toggle</command>
         <property>/controls/lighting/instrument-lights</property>
       </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
     </action>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>on-off</object-name>
@@ -52,6 +56,5 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>
-

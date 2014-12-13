@@ -155,6 +155,16 @@
     <object-name>propdisc</object-name>
   </effect>
   
+  <!-- Cranking -->
+  <model>
+    <path>Aircraft/Tecnam-P2010/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m> -1.2 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Interieur -->
   <model>
     <usage>interior</usage>
